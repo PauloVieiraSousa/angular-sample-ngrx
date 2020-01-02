@@ -1,0 +1,15 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="d-flex justify-content-center align-content-center w-50">
+
+    <form [formGroup]="userForm" class="userform w-100">
+      <div class="form-group">
+        <label for="profile">Profile CPF / CNPJ</label>
+        <input type="text" id="profile" formControlName="profile" class="form-control" [ngClass]="{'is-invalid': userForm.get('profile').errors}" maskCpfCnpj cpfCnpjValidator/>
+        <div class="invalid-feedback"> CPF or CNPJ invalid</div>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
