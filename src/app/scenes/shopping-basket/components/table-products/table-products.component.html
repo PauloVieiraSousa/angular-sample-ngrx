@@ -1,0 +1,29 @@
+<div  class="card">
+  <div class="card-body">
+
+    <h5 class="card-title">List Products</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Shopping Cart</h6>
+{{items}}
+    <table class="table mt-5">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Item</th>
+        <th>Qtd.</th>
+        <th>Price</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr *ngFor="let item of items">
+        <td>{{ item.id }}</td>
+        <td>{{ item.product }}</td>
+        <td>{{ item.qtd }}</td>
+        <td>{{ item.price }}</td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+

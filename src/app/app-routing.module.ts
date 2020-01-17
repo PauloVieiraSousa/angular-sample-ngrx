@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {FormExampleComponent} from "./form-example/form-example.component";
 
 
 const routes: Routes = [
+  { path: 'shopping-basket', loadChildren: () => import('./scenes/shopping-basket/shopping-basket.module').then( m => m.ShoppingBasketModule ) },
   {
     path: '',
-    component: FormExampleComponent
-  }
+    redirectTo: 'shopping-basket',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
